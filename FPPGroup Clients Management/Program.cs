@@ -16,7 +16,10 @@ namespace FPPGroup_Clients_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            FPPG_ClassLibrary.GlobalConfig.InitializeConnections();
+
+            Application.Run(new MainPanel());
         }
     }
 }

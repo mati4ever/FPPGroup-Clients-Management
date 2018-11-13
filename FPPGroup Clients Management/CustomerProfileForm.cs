@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FPPGroup_Clients_Management
 {
-    public partial class Form1 : Form
+    public partial class CustomerProfileForm : Form
     {
-        public Form1()
+        public CustomerProfileForm()
         {
             InitializeComponent();
         }
