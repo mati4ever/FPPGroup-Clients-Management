@@ -23,6 +23,24 @@ namespace FPPG_ClassLibrary
 
         public bool Status { get; set; } = false;
 
+        public string CzyAktywne()
+        {
+            if (Status)
+            {
+                return "Nieaktywne";
+            }
+            return "Aktywne";
+        }
 
+        public string Represent
+        {
+            get
+            {
+                return $@" { TaskDate.ToString("dd-MM-yyyy") }    --      { TaskCategory }      --      { Person.FirstName } { Person.LastName }                    Status:    { CzyAktywne() }" ;
+            }
+        }
+
+
+        
     }
 }

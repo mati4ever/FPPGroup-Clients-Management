@@ -36,7 +36,6 @@
             this.klient_button = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.date_label = new System.Windows.Forms.Label();
             this.today_label = new System.Windows.Forms.Label();
             this.changingPanel = new System.Windows.Forms.Panel();
@@ -44,7 +43,6 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -141,21 +139,10 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
-            this.panel2.Controls.Add(this.date_label);
-            this.panel2.Controls.Add(this.today_label);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(269, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(951, 70);
-            this.panel2.TabIndex = 1;
-            // 
             // date_label
             // 
             this.date_label.AutoSize = true;
-            this.date_label.Location = new System.Drawing.Point(88, 24);
+            this.date_label.Location = new System.Drawing.Point(358, 26);
             this.date_label.Name = "date_label";
             this.date_label.Size = new System.Drawing.Size(0, 23);
             this.date_label.TabIndex = 0;
@@ -163,7 +150,7 @@
             // today_label
             // 
             this.today_label.AutoSize = true;
-            this.today_label.Location = new System.Drawing.Point(32, 24);
+            this.today_label.Location = new System.Drawing.Point(293, 26);
             this.today_label.Name = "today_label";
             this.today_label.Size = new System.Drawing.Size(50, 23);
             this.today_label.TabIndex = 0;
@@ -189,9 +176,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1220, 620);
+            this.Controls.Add(this.date_label);
             this.Controls.Add(this.movingPanel_panel);
+            this.Controls.Add(this.today_label);
             this.Controls.Add(this.changingPanel);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.Color.White;
@@ -202,16 +190,14 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button klient_button;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;

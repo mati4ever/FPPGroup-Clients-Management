@@ -30,7 +30,7 @@ namespace FPPG_ClassLibrary
         {
             get
             {
-                return $@"ID -{ Id }-   { FirstName } { LastName }   Tel.    { PhoneNumber }    E-Mail    { EmailAddress } ";
+                return $@"ID   { Id }     --     { FirstName } { LastName }     --    Tel.    { PhoneNumber }    --    E-Mail    { EmailAddress } ";
             }
         }
 

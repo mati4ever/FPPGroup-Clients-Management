@@ -117,5 +117,21 @@ namespace FPPG_ClassLibrary
         {
             return TaskListFile.FullFilePath().LoadFile().ConvertToTaskModels(PeopleFile);
         }
+
+        public void TaskDelay(TaskModel task)
+        {
+            List<TaskModel> tasks = TaskListFile.FullFilePath().LoadFile().ConvertToTaskModels(PeopleFile);
+
+            foreach (TaskModel t in tasks)
+            {
+                if (t.Id == task.Id)
+                {
+                    t.TaskDate = t.TaskDate.AddDays(1);
+                }
+            }
+
+            tasks.SaveToTaskFile(TaskListFile);
+
+        }
     }
 }
