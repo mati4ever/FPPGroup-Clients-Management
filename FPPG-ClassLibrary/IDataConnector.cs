@@ -14,6 +14,9 @@ namespace FPPG_ClassLibrary
         ConnectionsModel CreateConnection(ConnectionsModel connection);
         int GetNewCustommerId();
         List<string> GetTaskCategory();
+        TaskModel CreateTask(TaskModel task);
+        List<TaskModel> GetAllTasks();
+        
 
     }
 }

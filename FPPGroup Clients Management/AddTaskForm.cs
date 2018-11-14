@@ -62,7 +62,8 @@ namespace FPPGroup_Clients_Management
                     task.TaskCategory = (string)taskCategory_combobox.SelectedItem;
                     task.TaskNote = taskNote_textbox.Text;
 
-
+                    GlobalConfig.Connection.CreateTask(task);
+                    callingForm.LoadTasksLiastForm();
                 }
                 else
                 {

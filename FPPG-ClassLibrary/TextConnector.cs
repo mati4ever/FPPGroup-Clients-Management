@@ -12,6 +12,8 @@ namespace FPPG_ClassLibrary
         private const string PeopleFile = "CustomersFile.csv";
         private const string ConnectionsFile = "Connections.csv";
         private const string TaskCategoryFile = "TaskCategory.csv";
+        private const string TaskListFile = "TaskList.csv";
+
 
         public PersonModel CreatePerson(PersonModel person)
         {
@@ -87,6 +89,33 @@ namespace FPPG_ClassLibrary
         {
             List<string> category = TaskCategoryFile.FullFilePath().LoadFile();
             return category;
+        }
+
+        public TaskModel CreateTask(TaskModel task)
+        {
+            List<TaskModel> tasks = TaskListFile.FullFilePath().LoadFile().ConvertToTaskModels(PeopleFile);
+
+            int currentId = 1;
+
+            if (tasks.Count > 0)
+            {
+                currentId = tasks.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            task.Id = currentId;
+
+            tasks.Add(task);
+
+            tasks.SaveToTaskFile(TaskListFile);
+
+            return task;
+
+
+        }
+
+        public List<TaskModel> GetAllTasks()
+        {
+            return TaskListFile.FullFilePath().LoadFile().ConvertToTaskModels(PeopleFile);
         }
     }
 }
