@@ -25,6 +25,8 @@ namespace FPPG_ClassLibrary
 
         public string PESEL { get; set; }
 
+        public string Note { get; set; }
+
 
         public string Represent
         {

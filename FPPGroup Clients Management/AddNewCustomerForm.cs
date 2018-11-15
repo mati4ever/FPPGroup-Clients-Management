@@ -54,6 +54,7 @@ namespace FPPGroup_Clients_Management
                 model.EmailAddress = email_textbox.Text;
                 model.PersonalIdNumber = personalIdNumber_textbox.Text;
                 model.PESEL = pesel_textbox.Text;
+                model.Note = additionalInfo_textbox.Text;
 
 
                 GlobalConfig.Connection.CreatePerson(model);

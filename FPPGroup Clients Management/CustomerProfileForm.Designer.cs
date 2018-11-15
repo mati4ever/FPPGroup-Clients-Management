@@ -150,7 +150,7 @@
             // additionalInfo_label
             // 
             this.additionalInfo_label.AutoSize = true;
-            this.additionalInfo_label.Location = new System.Drawing.Point(15, 309);
+            this.additionalInfo_label.Location = new System.Drawing.Point(15, 339);
             this.additionalInfo_label.Name = "additionalInfo_label";
             this.additionalInfo_label.Size = new System.Drawing.Size(236, 23);
             this.additionalInfo_label.TabIndex = 21;
@@ -159,7 +159,7 @@
             // email_label
             // 
             this.email_label.AutoSize = true;
-            this.email_label.Location = new System.Drawing.Point(15, 257);
+            this.email_label.Location = new System.Drawing.Point(15, 282);
             this.email_label.Name = "email_label";
             this.email_label.Size = new System.Drawing.Size(126, 23);
             this.email_label.TabIndex = 20;
@@ -168,7 +168,7 @@
             // address_label
             // 
             this.address_label.AutoSize = true;
-            this.address_label.Location = new System.Drawing.Point(15, 153);
+            this.address_label.Location = new System.Drawing.Point(13, 168);
             this.address_label.Name = "address_label";
             this.address_label.Size = new System.Drawing.Size(66, 23);
             this.address_label.TabIndex = 19;
@@ -177,7 +177,7 @@
             // phoneNumber_label
             // 
             this.phoneNumber_label.AutoSize = true;
-            this.phoneNumber_label.Location = new System.Drawing.Point(15, 205);
+            this.phoneNumber_label.Location = new System.Drawing.Point(15, 225);
             this.phoneNumber_label.Name = "phoneNumber_label";
             this.phoneNumber_label.Size = new System.Drawing.Size(162, 23);
             this.phoneNumber_label.TabIndex = 18;
@@ -186,7 +186,7 @@
             // lastName_label
             // 
             this.lastName_label.AutoSize = true;
-            this.lastName_label.Location = new System.Drawing.Point(14, 102);
+            this.lastName_label.Location = new System.Drawing.Point(14, 108);
             this.lastName_label.Name = "lastName_label";
             this.lastName_label.Size = new System.Drawing.Size(100, 23);
             this.lastName_label.TabIndex = 17;
@@ -195,7 +195,7 @@
             // pesel_label
             // 
             this.pesel_label.AutoSize = true;
-            this.pesel_label.Location = new System.Drawing.Point(270, 102);
+            this.pesel_label.Location = new System.Drawing.Point(270, 108);
             this.pesel_label.Name = "pesel_label";
             this.pesel_label.Size = new System.Drawing.Size(63, 23);
             this.pesel_label.TabIndex = 22;
@@ -213,10 +213,11 @@
             // additionalInfo_textbox
             // 
             this.additionalInfo_textbox.Enabled = false;
-            this.additionalInfo_textbox.Location = new System.Drawing.Point(19, 335);
+            this.additionalInfo_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.additionalInfo_textbox.Location = new System.Drawing.Point(19, 365);
             this.additionalInfo_textbox.Multiline = true;
             this.additionalInfo_textbox.Name = "additionalInfo_textbox";
-            this.additionalInfo_textbox.Size = new System.Drawing.Size(492, 89);
+            this.additionalInfo_textbox.Size = new System.Drawing.Size(492, 59);
             this.additionalInfo_textbox.TabIndex = 13;
             // 
             // firstName_label
@@ -231,64 +232,64 @@
             // email_textbox
             // 
             this.email_textbox.Enabled = false;
-            this.email_textbox.Location = new System.Drawing.Point(19, 283);
-            this.email_textbox.Multiline = true;
+            this.email_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.email_textbox.Location = new System.Drawing.Point(17, 308);
             this.email_textbox.Name = "email_textbox";
-            this.email_textbox.Size = new System.Drawing.Size(492, 23);
+            this.email_textbox.Size = new System.Drawing.Size(492, 28);
             this.email_textbox.TabIndex = 12;
             // 
             // phoneNumbet_textbox
             // 
             this.phoneNumbet_textbox.Enabled = false;
-            this.phoneNumbet_textbox.Location = new System.Drawing.Point(19, 231);
-            this.phoneNumbet_textbox.Multiline = true;
+            this.phoneNumbet_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.phoneNumbet_textbox.Location = new System.Drawing.Point(18, 251);
             this.phoneNumbet_textbox.Name = "phoneNumbet_textbox";
-            this.phoneNumbet_textbox.Size = new System.Drawing.Size(237, 23);
+            this.phoneNumbet_textbox.Size = new System.Drawing.Size(237, 28);
             this.phoneNumbet_textbox.TabIndex = 11;
             // 
             // address_textbox
             // 
             this.address_textbox.Enabled = false;
-            this.address_textbox.Location = new System.Drawing.Point(19, 179);
-            this.address_textbox.Multiline = true;
+            this.address_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.address_textbox.Location = new System.Drawing.Point(17, 194);
             this.address_textbox.Name = "address_textbox";
-            this.address_textbox.Size = new System.Drawing.Size(492, 23);
+            this.address_textbox.Size = new System.Drawing.Size(492, 28);
             this.address_textbox.TabIndex = 10;
             // 
             // pesel_textbox
             // 
             this.pesel_textbox.Enabled = false;
-            this.pesel_textbox.Location = new System.Drawing.Point(274, 128);
-            this.pesel_textbox.Multiline = true;
+            this.pesel_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pesel_textbox.Location = new System.Drawing.Point(274, 134);
             this.pesel_textbox.Name = "pesel_textbox";
-            this.pesel_textbox.Size = new System.Drawing.Size(237, 22);
+            this.pesel_textbox.Size = new System.Drawing.Size(237, 28);
             this.pesel_textbox.TabIndex = 9;
             // 
             // lastName_textbox
             // 
             this.lastName_textbox.Enabled = false;
-            this.lastName_textbox.Location = new System.Drawing.Point(19, 128);
-            this.lastName_textbox.Multiline = true;
+            this.lastName_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lastName_textbox.Location = new System.Drawing.Point(19, 134);
             this.lastName_textbox.Name = "lastName_textbox";
-            this.lastName_textbox.Size = new System.Drawing.Size(237, 22);
+            this.lastName_textbox.Size = new System.Drawing.Size(237, 28);
             this.lastName_textbox.TabIndex = 8;
             // 
             // personalIdNumber_textbox
             // 
             this.personalIdNumber_textbox.Enabled = false;
+            this.personalIdNumber_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.personalIdNumber_textbox.Location = new System.Drawing.Point(274, 77);
-            this.personalIdNumber_textbox.Multiline = true;
             this.personalIdNumber_textbox.Name = "personalIdNumber_textbox";
-            this.personalIdNumber_textbox.Size = new System.Drawing.Size(237, 22);
+            this.personalIdNumber_textbox.Size = new System.Drawing.Size(237, 28);
             this.personalIdNumber_textbox.TabIndex = 7;
             // 
             // firstName_textbox
             // 
             this.firstName_textbox.Enabled = false;
+            this.firstName_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.firstName_textbox.Location = new System.Drawing.Point(19, 77);
-            this.firstName_textbox.Multiline = true;
             this.firstName_textbox.Name = "firstName_textbox";
-            this.firstName_textbox.Size = new System.Drawing.Size(237, 22);
+            this.firstName_textbox.Size = new System.Drawing.Size(237, 28);
             this.firstName_textbox.TabIndex = 14;
             // 
             // customerProfileLabel
@@ -366,7 +367,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomerProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerProfile";

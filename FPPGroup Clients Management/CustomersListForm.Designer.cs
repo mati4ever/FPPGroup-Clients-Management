@@ -98,6 +98,7 @@
             this.fullProfile_button.Text = "Pełny profil";
             this.fullProfile_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.fullProfile_button.UseVisualStyleBackColor = true;
+            this.fullProfile_button.Click += new System.EventHandler(this.fullProfile_button_Click);
             // 
             // customerTask_button
             // 

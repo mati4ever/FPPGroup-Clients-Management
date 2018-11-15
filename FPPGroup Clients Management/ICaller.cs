@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FPPG_ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace FPPGroup_Clients_Management
         void AddTask();
         void LoadCustomersListForm();
         void LoadTasksLiastForm();
-
+        void LoadEditeCustomer(PersonModel person);
 
     }
 }

@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FPPG_ClassLibrary;
 
 namespace FPPGroup_Clients_Management
 {
     public partial class MainPanel : Form, ICaller
     {
+        private bool disable = false;
+
         public void AddCustomer()
         {
+            disable = true;
+            ControlButtons();
+
             changingPanel.Controls.Clear();
             AddNewCustomerForm addcustomer = new AddNewCustomerForm(this);
             addcustomer.TopLevel = false;
@@ -38,6 +44,9 @@ namespace FPPGroup_Clients_Management
 
         public void LoadCustomersListForm()
         {
+            disable = false;
+            ControlButtons();
+
             changingPanel.Controls.Clear();
 
             CustomersListForm customers = new CustomersListForm(this);
@@ -55,6 +64,9 @@ namespace FPPGroup_Clients_Management
 
         public void LoadTasksLiastForm()
         {
+            disable = false;
+            ControlButtons();
+
             changingPanel.Controls.Clear();
 
             TasksListForm tasks = new TasksListForm(this);
@@ -75,6 +87,9 @@ namespace FPPGroup_Clients_Management
         /// </summary>
         private void LoadHomePanel()
         {
+            disable = false;
+            ControlButtons();
+
             changingPanel.Controls.Clear();
             HomeForm home = new HomeForm();
             home.TopLevel = false;
@@ -100,12 +115,45 @@ namespace FPPGroup_Clients_Management
 
         public void AddTask()
         {
+            disable = true;
+            ControlButtons();
+
             changingPanel.Controls.Clear();
             AddTaskForm addTask = new AddTaskForm(this);
             addTask.TopLevel = false;
             changingPanel.Controls.Add(addTask);
             addTask.Show();
         }
+
+        public void LoadEditeCustomer(PersonModel person)
+        {
+            disable = true;
+            ControlButtons();
+
+            changingPanel.Controls.Clear();
+            CustomerProfileForm tasks = new CustomerProfileForm(person);
+            tasks.TopLevel = false;
+            changingPanel.Controls.Add(tasks);
+            tasks.Show();
+        }
+
+        private void ControlButtons()
+        {
+            if (disable)
+            {
+                home_button.Enabled = false;
+                klient_button.Enabled = false;
+                tasks_button.Enabled = false;
+            }
+            else
+            {
+                home_button.Enabled = true;
+                klient_button.Enabled = true;
+                tasks_button.Enabled = true;
+            }
+
+        }
+
 
 
         protected override void WndProc(ref Message m)

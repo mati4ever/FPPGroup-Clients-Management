@@ -43,6 +43,7 @@ namespace FPPG_ClassLibrary.TextConverter
                 p.EmailAddress = cols[5];
                 p.PersonalIdNumber = cols[6];
                 p.PESEL = cols[7];
+                p.Note = cols[8];
 
                 output.Add(p);
 
@@ -57,7 +58,7 @@ namespace FPPG_ClassLibrary.TextConverter
             List<string> lines = new List<string>();
             foreach (PersonModel p in models)
             {
-                lines.Add($"{ p.Id }#{ p.FirstName }#{ p.LastName }#{ p.Address }#{ p.PhoneNumber}#{ p.EmailAddress }#{ p.PersonalIdNumber }#{ p.PESEL }");
+                lines.Add($"{ p.Id }#{ p.FirstName }#{ p.LastName }#{ p.Address }#{ p.PhoneNumber}#{ p.EmailAddress }#{ p.PersonalIdNumber }#{ p.PESEL }#{ p.Note }");
             }
             File.WriteAllLines(fileName.FullFilePath(), lines);
         }

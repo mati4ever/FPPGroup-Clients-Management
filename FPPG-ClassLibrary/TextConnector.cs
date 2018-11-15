@@ -27,7 +27,6 @@ namespace FPPG_ClassLibrary
 
         }
 
-
         public List<PersonModel> GetPerson_All()
         {
             List<PersonModel> people = PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();

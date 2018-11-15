@@ -45,5 +45,11 @@ namespace FPPGroup_Clients_Management
             //this.Close();
 
         }
+
+        private void fullProfile_button_Click(object sender, EventArgs e)
+        {
+            PersonModel person = (PersonModel)customersList_listbox.SelectedItem;
+            calligForm.LoadEditeCustomer(person);
+        }
     }
 }
