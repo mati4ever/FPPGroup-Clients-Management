@@ -39,6 +39,8 @@
             this.missedTask_listbox = new System.Windows.Forms.ListBox();
             this.taskDoen1_button = new System.Windows.Forms.Button();
             this.removeTask_button = new System.Windows.Forms.Button();
+            this.todayTaskDone_button = new System.Windows.Forms.Button();
+            this.todayTaskAddDay_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // todayTasks_label
@@ -90,6 +92,7 @@
             this.taskDone_button.TabIndex = 5;
             this.taskDone_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.taskDone_button.UseVisualStyleBackColor = true;
+            this.taskDone_button.Click += new System.EventHandler(this.taskDone_button_Click);
             // 
             // taskDelay_button
             // 
@@ -134,6 +137,7 @@
             this.taskDoen1_button.TabIndex = 5;
             this.taskDoen1_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.taskDoen1_button.UseVisualStyleBackColor = true;
+            this.taskDoen1_button.Click += new System.EventHandler(this.taskDoen1_button_Click);
             // 
             // removeTask_button
             // 
@@ -146,6 +150,33 @@
             this.removeTask_button.TabIndex = 5;
             this.removeTask_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.removeTask_button.UseVisualStyleBackColor = true;
+            this.removeTask_button.Click += new System.EventHandler(this.removeTask_button_Click);
+            // 
+            // todayTaskDone_button
+            // 
+            this.todayTaskDone_button.FlatAppearance.BorderSize = 0;
+            this.todayTaskDone_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.todayTaskDone_button.Image = ((System.Drawing.Image)(resources.GetObject("todayTaskDone_button.Image")));
+            this.todayTaskDone_button.Location = new System.Drawing.Point(847, 42);
+            this.todayTaskDone_button.Name = "todayTaskDone_button";
+            this.todayTaskDone_button.Size = new System.Drawing.Size(74, 48);
+            this.todayTaskDone_button.TabIndex = 5;
+            this.todayTaskDone_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.todayTaskDone_button.UseVisualStyleBackColor = true;
+            this.todayTaskDone_button.Click += new System.EventHandler(this.todayTaskDone_button_Click);
+            // 
+            // todayTaskAddDay_button
+            // 
+            this.todayTaskAddDay_button.FlatAppearance.BorderSize = 0;
+            this.todayTaskAddDay_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.todayTaskAddDay_button.Image = ((System.Drawing.Image)(resources.GetObject("todayTaskAddDay_button.Image")));
+            this.todayTaskAddDay_button.Location = new System.Drawing.Point(847, 90);
+            this.todayTaskAddDay_button.Name = "todayTaskAddDay_button";
+            this.todayTaskAddDay_button.Size = new System.Drawing.Size(74, 48);
+            this.todayTaskAddDay_button.TabIndex = 5;
+            this.todayTaskAddDay_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.todayTaskAddDay_button.UseVisualStyleBackColor = true;
+            this.todayTaskAddDay_button.Click += new System.EventHandler(this.todayTaskAddDay_button_Click);
             // 
             // HomeForm
             // 
@@ -153,9 +184,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(933, 532);
+            this.Controls.Add(this.todayTaskAddDay_button);
             this.Controls.Add(this.taskDelay_button);
             this.Controls.Add(this.removeTask_button);
             this.Controls.Add(this.taskDoen1_button);
+            this.Controls.Add(this.todayTaskDone_button);
             this.Controls.Add(this.taskDone_button);
             this.Controls.Add(this.closeTasks_listbox);
             this.Controls.Add(this.missedTask_listbox);
@@ -186,5 +219,7 @@
         private System.Windows.Forms.ListBox missedTask_listbox;
         private System.Windows.Forms.Button taskDoen1_button;
         private System.Windows.Forms.Button removeTask_button;
+        private System.Windows.Forms.Button todayTaskDone_button;
+        private System.Windows.Forms.Button todayTaskAddDay_button;
     }
 }

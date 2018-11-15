@@ -16,7 +16,10 @@ namespace FPPG_ClassLibrary
         List<string> GetTaskCategory();
         TaskModel CreateTask(TaskModel task);
         List<TaskModel> GetAllTasks();
+        List<TaskModel> GetActiveTasks();
         void TaskDelay(TaskModel task);
+        void TaskDone(TaskModel task);
+        TaskModel RemoveTask(TaskModel task);
         
 
     }

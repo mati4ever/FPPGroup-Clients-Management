@@ -133,5 +133,37 @@ namespace FPPG_ClassLibrary
             tasks.SaveToTaskFile(TaskListFile);
 
         }
+
+        public void TaskDone(TaskModel task)
+        {
+            List<TaskModel> tasks = TaskListFile.FullFilePath().LoadFile().ConvertToTaskModels(PeopleFile);
+
+            foreach (TaskModel t in tasks)
+            {
+                if(t.Id == task.Id)
+                {
+                    t.Status = true;
+                }
+
+                tasks.SaveToTaskFile(TaskListFile);
+
+            }
+        }
+
+        public List<TaskModel> GetActiveTasks()
+        {
+
+            return TaskListFile.FullFilePath().LoadFile().GetActiveTasks(PeopleFile);
+        }
+
+        public TaskModel RemoveTask(TaskModel task)
+        {
+            List<TaskModel> tasks = TaskListFile.FullFilePath().LoadFile().ConvertToTaskModels(PeopleFile);
+
+            var taskToRemove = tasks.Single(x => x.Id == task.Id);
+            tasks.Remove(taskToRemove);
+            tasks.SaveToTaskFile(TaskListFile);
+            return task;
+        }
     }
 }

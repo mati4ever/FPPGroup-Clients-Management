@@ -159,5 +159,44 @@ namespace FPPG_ClassLibrary.TextConverter
             }
             File.WriteAllLines(fileName.FullFilePath(), lines);
         }
+
+        public static List<TaskModel> GetActiveTasks(this List<string> lines, string peopleFileName)
+        {
+            List<TaskModel> output = new List<TaskModel>();
+            List<PersonModel> people = peopleFileName.FullFilePath().LoadFile().ConvertToPersonModels();
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split('#');
+                TaskModel t = new TaskModel();
+
+                t.Id = int.Parse(cols[0]);
+                t.TaskCategory = cols[1];
+                t.CreationDate = DateTime.Parse(cols[2]);
+                t.TaskDate = DateTime.Parse(cols[3]);
+                t.TaskNote = cols[4];
+                t.Status = bool.Parse(cols[5]);
+
+                int personId = int.Parse(cols[6]);
+
+                foreach (PersonModel p in people)
+                {
+                    if (p.Id == personId)
+                    {
+                        t.Person = p;
+                    }
+                }
+
+                if (!t.Status)
+                {
+                    output.Add(t);
+                }
+
+
+            }
+            return output;
+
+        }
+
     }
 }

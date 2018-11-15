@@ -50,7 +50,7 @@ namespace FPPGroup_Clients_Management
 
             foreach (TaskModel t in allTasks)
             {
-                if (t.TaskDate.Date.CompareTo(today.Date) == 0)
+                if (t.TaskDate.Date.CompareTo(today.Date) == 0 && !t.Status)
                 {
                     output.Add(t);
                 }
@@ -67,7 +67,7 @@ namespace FPPGroup_Clients_Management
 
             foreach (TaskModel t in allTasks)
             {
-                if (t.TaskDate.Date.CompareTo(today.Date) < 7 && t.TaskDate.Date.CompareTo(today.Date) > 0)
+                if (t.TaskDate.Date.CompareTo(today.Date) < 7 && t.TaskDate.Date.CompareTo(today.Date) > 0 && !t.Status)
                 {
                     output.Add(t);
                 }
@@ -98,10 +98,57 @@ namespace FPPGroup_Clients_Management
         {
             TaskModel task = (TaskModel)closeTasks_listbox.SelectedItem;
 
+            TaskDelay(task);
+            
+        }
+
+        private void todayTaskAddDay_button_Click(object sender, EventArgs e)
+        {
+            TaskModel task = (TaskModel)todayTask_listbox.SelectedItem;
+
+            TaskDelay(task);
+
+        }
+
+        private void todayTaskDone_button_Click(object sender, EventArgs e)
+        {
+            TaskModel task = (TaskModel)todayTask_listbox.SelectedItem;
+            TaskDone(task);
+        }
+
+        private void taskDone_button_Click(object sender, EventArgs e)
+        {
+            TaskModel task = (TaskModel)closeTasks_listbox.SelectedItem;
+
+            TaskDone(task);
+        }
+
+        private void TaskDone(TaskModel task)
+        {
+            GlobalConfig.Connection.TaskDone(task);
+
+            InitializeLists();
+        }
+
+        private void TaskDelay(TaskModel task)
+        {
             GlobalConfig.Connection.TaskDelay(task);
 
             InitializeLists();
-            
+        }
+
+        private void taskDoen1_button_Click(object sender, EventArgs e)
+        {
+            TaskModel task = (TaskModel)missedTask_listbox.SelectedItem;
+            TaskDone(task);
+
+        }
+
+        private void removeTask_button_Click(object sender, EventArgs e)
+        {
+            TaskModel task = (TaskModel)missedTask_listbox.SelectedItem;
+            GlobalConfig.Connection.RemoveTask(task);
+            InitializeLists();
         }
     }
 }

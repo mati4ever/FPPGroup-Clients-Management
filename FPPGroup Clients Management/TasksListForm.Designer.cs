@@ -35,13 +35,14 @@
             this.addTask_button = new System.Windows.Forms.Button();
             this.taskDone_button = new System.Windows.Forms.Button();
             this.taskDetails_button = new System.Windows.Forms.Button();
+            this.onlyActiveTasks_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // taskList_listbox
             // 
             this.taskList_listbox.FormattingEnabled = true;
             this.taskList_listbox.ItemHeight = 23;
-            this.taskList_listbox.Location = new System.Drawing.Point(14, 35);
+            this.taskList_listbox.Location = new System.Drawing.Point(14, 56);
             this.taskList_listbox.Name = "taskList_listbox";
             this.taskList_listbox.Size = new System.Drawing.Size(905, 372);
             this.taskList_listbox.Sorted = true;
@@ -50,7 +51,7 @@
             // taskList_label
             // 
             this.taskList_label.AutoSize = true;
-            this.taskList_label.Location = new System.Drawing.Point(12, 9);
+            this.taskList_label.Location = new System.Drawing.Point(12, 30);
             this.taskList_label.Name = "taskList_label";
             this.taskList_label.Size = new System.Drawing.Size(120, 23);
             this.taskList_label.TabIndex = 2;
@@ -113,6 +114,19 @@
             this.taskDetails_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.taskDetails_button.UseVisualStyleBackColor = true;
             // 
+            // onlyActiveTasks_button
+            // 
+            this.onlyActiveTasks_button.FlatAppearance.BorderSize = 0;
+            this.onlyActiveTasks_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.onlyActiveTasks_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.onlyActiveTasks_button.Location = new System.Drawing.Point(737, 12);
+            this.onlyActiveTasks_button.Name = "onlyActiveTasks_button";
+            this.onlyActiveTasks_button.Size = new System.Drawing.Size(182, 38);
+            this.onlyActiveTasks_button.TabIndex = 5;
+            this.onlyActiveTasks_button.Text = "Tylko aktywne";
+            this.onlyActiveTasks_button.UseVisualStyleBackColor = true;
+            this.onlyActiveTasks_button.Click += new System.EventHandler(this.onlyActiveTasks_button_Click);
+            // 
             // TasksListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -121,6 +135,7 @@
             this.ClientSize = new System.Drawing.Size(933, 532);
             this.Controls.Add(this.remove_button);
             this.Controls.Add(this.taskDetails_button);
+            this.Controls.Add(this.onlyActiveTasks_button);
             this.Controls.Add(this.taskDone_button);
             this.Controls.Add(this.addTask_button);
             this.Controls.Add(this.taskList_listbox);
@@ -145,5 +160,6 @@
         private System.Windows.Forms.Button addTask_button;
         private System.Windows.Forms.Button taskDone_button;
         private System.Windows.Forms.Button taskDetails_button;
+        private System.Windows.Forms.Button onlyActiveTasks_button;
     }
 }

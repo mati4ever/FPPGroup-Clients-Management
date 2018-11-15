@@ -36,7 +36,7 @@ namespace FPPG_ClassLibrary
         {
             get
             {
-                return $@" { TaskDate.ToString("dd-MM-yyyy") }    --      { TaskCategory }      --      { Person.FirstName } { Person.LastName }                    Status:    { CzyAktywne() }" ;
+                return $@" { TaskDate.ToString("yyyy-MM-dd") }    --      { TaskCategory }      --      { Person.FirstName } { Person.LastName }                    Status:    { CzyAktywne() }" ;
             }
         }
 
